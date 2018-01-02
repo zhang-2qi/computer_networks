@@ -1,0 +1,13 @@
+clear;
+clc;
+close all;
+load('T1.mat');
+figure;
+label = {'tcp','udp','other'};
+explode = {};
+data1 = [chutcpnum,chuudpnum,chuothernum];
+pie(data1,label);
+title('传输层协议分组出方向统计','FontSize',16);
+figure;
+pie([chutcpdata,chuudpdata,chuotherdata],label);
+title('传输层协议数据量入方向统计','FontSize',16);
